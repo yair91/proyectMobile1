@@ -43,7 +43,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/etEmaiLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -54,7 +54,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/etContrasenaLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -68,9 +68,10 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
             android:layout_marginTop="20dp"
+            android:onClick="btnIngresar"
             android:padding="15dp"
+            android:text="Button"
             android:textSize="24sp" />
 
         <LinearLayout
@@ -94,8 +95,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                android:textColor="#EC4815"
+                android:onClick="registrarse"
                 android:text="Registrate"
+                android:textColor="#EC4815"
                 android:textSize="24sp" />
         </LinearLayout>
 

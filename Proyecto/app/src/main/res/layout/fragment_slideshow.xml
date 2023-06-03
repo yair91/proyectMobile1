@@ -21,6 +21,12 @@
             android:layout_height="wrap_content"
             tools:src="@tools:sample/avatars" />
 
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
         <ListView
             android:id="@+id/listPlatillos"
             android:layout_width="match_parent"

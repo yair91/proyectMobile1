@@ -73,7 +73,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editxtConfirmPassword"
+            android:id="@+id/etConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -85,6 +85,7 @@
             android:id="@+id/btnRegisterUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="registrarse"
             android:text="Registrar"
             android:textSize="24sp" />
     </LinearLayout>
