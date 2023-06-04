@@ -21,8 +21,7 @@ public class GalleryFragment extends Fragment {
     private FragmentGalleryBinding binding;
     private EditText pre;
     private TextView po;
-    private CostruCuenta[] costrucuentas;
-    private int conta = 1;
+    private CostruCuenta[] costrucuenta;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -33,30 +32,31 @@ public class GalleryFragment extends Fragment {
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        costrucuentas = new CostruCuenta[1];
+        costrucuenta = new CostruCuenta[1];
+        costrucuenta[0] = new CostruCuenta();
 
         pre = root.findViewById(R.id.txtprecio);
         po = root.findViewById(R.id.txtdinero);
 
-        int por = costrucuentas[1].getAumento();
-
-        po.setText("saldo disponible: " + por);
-
         return root;
     }
-
-    private void obtenervalor(){
-        int pr = 0;
-        int pr2 = costrucuentas[1].getAumento();
-
+    public void obtenervalor(View view){
         if (pre.getText().length() == 0) {
-            Toast.makeText(getActivity(), "Falta cantida a agregar", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Falta cantidad a agregar", Toast.LENGTH_SHORT).show();
         } else {
-            pr = Integer.parseInt(pre.getText().toString());
+            int pr = Integer.parseInt(pre.getText().toString());
+            costrucuenta[0].setAumento(pr);
+            actualizar(view);
+            pre.setText("");
         }
-            int suma = pr + pr2;
-        costrucuentas[conta] = new CostruCuenta(suma);
-        pre.setText("");
+    }
+
+    public void actualizar(View view){
+        int v1 = costrucuenta[0].getAumento();
+        int v2 = costrucuenta[0].getAumneto2();
+        int valor = v1 + v2;
+        costrucuenta[0].setAumneto2(valor);
+        po.setText(String.valueOf(valor));
     }
 
     @Override

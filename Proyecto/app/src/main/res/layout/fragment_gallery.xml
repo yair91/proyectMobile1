@@ -39,6 +39,7 @@
             android:id="@+id/subir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="obtenervalor"
             android:text="Subri" />
 
         <TextView

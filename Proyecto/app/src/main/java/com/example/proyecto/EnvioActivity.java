@@ -34,6 +34,7 @@ public class EnvioActivity extends AppCompatActivity {
             co = (EditText) findViewById(R.id.txtcolonia);
             ci = (EditText) findViewById(R.id.txtciudad);
             pos = (EditText) findViewById(R.id.txtpostal);
+            or = (Spinner) findViewById(R.id.sporden);
 
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, orden);
             or.setAdapter(adapter);
