@@ -9,6 +9,20 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
+
+    <string name="Sing_in">Sign In</string>
+    <string name="Hell">¡HELL</string>
+    <string name="o">O</string>
+    <string name="oo">¡</string>
+    <string name="PleaseSignIn">Please, sign in to continue</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="InfoLogIn">Don’t have an account?</string>
+    <string name="SingUp">Sing Up</string>
+
+
+
+
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 </resources>
