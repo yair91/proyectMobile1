@@ -22,9 +22,14 @@
 
     <string name="textHomeNameO">O</string>
     <string name="textHomeName">rder</string>
-    <string name="textHome1">       your food in a simple tap!</string>
+    <string name="textHome1"> your food in a </string>
+    <string name="textHome1.2">simple tap!</string>
     <string name="textHome2">Our mission is make simple, fastest and create a better experience with your customers </string>
     <string name="OrderNow">¡Order now!</string>
+    <string name="textHome3">it gona be avialble </string>
+    <string name="textHome3.1">around the world, and now you’re maken a change</string>
+
+
 
 
 

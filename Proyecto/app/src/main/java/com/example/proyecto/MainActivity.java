@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.proyecto.databinding.FragmentHomeBinding;
 
 public class MainActivity extends AppCompatActivity {
     private EditText email, contrasena;
