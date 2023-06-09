@@ -51,7 +51,10 @@ public class Register_activity extends AppCompatActivity {
             Toast mensaje = Toast.makeText(this, "Las contraseña no coinciden", Toast.LENGTH_LONG);
             mensaje.show();
         }
-
-
+    }
+    public void close( View view){
+        Intent intent = new Intent(Register_activity.this, MainActivity.class);
+        intent.putExtra("usuarios", user);
+        startActivity(intent);
     }
 }

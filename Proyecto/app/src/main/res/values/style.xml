@@ -13,4 +13,9 @@
     <item name="android:textColor">@color/transparenGreyText</item>
   </style>
 
+  <style name="test" parent="Widget.AppCompat.EditText">
+    <item name="colorPrimaryDark">@color/top_color</item>
+
+  </style>
+
 </resources>

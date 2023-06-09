@@ -7,5 +7,10 @@
     <color name="blue">#04B0D6</color>
     <color name="transparenGrey">#7A90A4C7</color>
     <color name="transparenGreyText">#4D6D8B</color>
+    <color name="top_color">#ff0000</color>
+
+    <color name="selectedSidebarTextColor">#01011F</color>
+
+
 
 </resources>
