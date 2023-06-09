@@ -49,6 +49,7 @@ public class ListAdapter extends ArrayAdapter<PlatillosClass> {
         holder.imagen.setImageResource(platillosClass.getImagen());
         holder.nombre.setText(platillosClass.getNombre());
         holder.costo.setText(String.valueOf(platillosClass.getCosto()));
+        holder.Descripcion.setText(platillosClass.getDescripcion());
 
         return convertView;
     }
