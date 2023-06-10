@@ -17,10 +17,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:src="@tools:sample/avatars" />
+            android:src="@drawable/ic_launcher_foreground"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,33 +29,39 @@
             <ListView
                 android:id="@+id/listPlatillosSeleccionados"
                 android:layout_width="match_parent"
-                android:layout_height="500dp" />
+                android:layout_height="490dp"
+                android:layout_marginBottom="10dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textSize="16dp"
+                    android:textAlignment="center"
+                    android:textColor="#000"
                     android:text="Total" />
 
                 <TextView
                     android:id="@+id/txtPrecioTotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
                     android:layout_weight="1" />
             </LinearLayout>
         </LinearLayout>
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btnPagarCuenta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Pagar" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,10 @@
 package com.example.proyecto;
 
 public class PlatillosClass {
-    private int id, imagen;
-    private String Nombre, Descripcion;
-    private Double costo;
-    private Boolean Disponible;
+    private static int id, imagen;
+    private static String Nombre, Descripcion;
+    private static Double costo;
+    private static Boolean Disponible;
 
     public PlatillosClass() {
     }
