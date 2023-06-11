@@ -40,6 +40,7 @@ public class SlideshowFragment extends Fragment {
         mPlatillos.add(new PlatillosClass(R.mipmap.tortas,"Tortas",2000.00,"Birote remojado en salsa de tomate, con carne por dentro"));
         mPlatillos.add(new PlatillosClass(R.mipmap.flautas,"Flautas",2000.00,"Tortilla dorada rellana de pollo"));
         mPlatillos.add(new PlatillosClass(R.mipmap.enchiladas,"Enchiladas",2000.00,"Tortilla dorada acompañada de salsa y crema"));
+        mPlatillos.add(new PlatillosClass(R.mipmap.enchiladas,"Enchiladas",2000.00,"Tortilla dorada acompañada de salsa y crema"));
 
         // Inicializador de adaptador
         listAdapter = new ListAdapter(requireContext(), R.layout.item_row, mPlatillos);

@@ -1,5 +1,6 @@
 package com.example.proyecto.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.proyecto.MainActivity;
+import com.example.proyecto.Register_activity;
 import com.example.proyecto.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -32,4 +35,5 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }
