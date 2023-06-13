@@ -20,6 +20,21 @@
     <string name="InfoLogIn">Don’t have an account?</string>
     <string name="SingUp">Sing Up</string>
 
+    <string name="SingUp1">Sing </string>
+    <string name="SingUp1.1">U</string>
+    <string name="SingUp1.2">p</string>
+    <string name="SingUpInfo">Create an account, so you can order you favorite food even faster</string>
+
+    <string name="SingUpName">Name</string>
+    <string name="SingUpLastName">Last Name</string>
+    <string name="SingUpEmail">Email</string>
+    <string name="SingUpPassword">Password</string>
+    <string name="SingUpConfirmPassword">Confirm password</string>
+
+
+
+
+
     <string name="textHomeNameO">O</string>
     <string name="textHomeName">rder</string>
     <string name="textHome1"> your food in a </string>
