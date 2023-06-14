@@ -7,74 +7,166 @@
     android:layout_height="match_parent"
     tools:context=".ui.envio.EnvioFragment">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="252dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/Adress1.2"
+        android:textColor="@color/blueMain"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="36dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="54dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/Adress1.1"
+        android:textColor="@color/orangeMain"
+        android:textSize="26sp"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/small" />
 
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:src="@tools:sample/avatars" />
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="18dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/Adress1"
+        android:textColor="@color/blueMain"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DOMICILIO" />
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/input_grey"
+        android:padding="16dp"
+        android:textColor="@color/blueMain"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="A que domicilio enviaremos tu comida?" />
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/SendInfo"
+        android:textColor="@color/blueMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/editTextText"
+        style="@style/InputGrey"
 
-        <EditText
-            android:id="@+id/editTextText3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Escribe tu calle"
-            android:inputType="text" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/Street"
+        android:inputType="text"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
-        <EditText
-            android:id="@+id/editTextText5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Escribe tu colonia"
-            android:inputType="text" />
+    <EditText
+        android:id="@+id/editTextText2"
+        style="@style/InputGrey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/Cologne"
+        android:padding="16dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
-        <EditText
-            android:id="@+id/editTextText4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Escribe tu ciudad"
-            android:inputType="text" />
+    <EditText
+        android:id="@+id/editTextText6"
+        style="@style/InputGrey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/Street"
+        android:inputType="text"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
-        <EditText
-            android:id="@+id/editxtPostalCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Escribe tu codigo postal"
-            android:inputType="text" />
+    <EditText
+        android:id="@+id/editxtPostalCode2"
+        style="@style/InputGrey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/ZipCode"
+        android:padding="16dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText6" />
 
-        <Button
-            android:id="@+id/btnGuardarDomicilio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnGuardarDomicilio2"
+        style="@style/MiEstiloDeBoton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/Send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editxtPostalCode2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

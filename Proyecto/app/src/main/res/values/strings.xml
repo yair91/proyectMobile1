@@ -52,10 +52,21 @@
     <string name="textHome3">it gona be avialble </string>
     <string name="textHome3.1">around the world, and now you’re maken a change</string>
 
+    <string name="Send">Send</string>
+    <string name="Adress1">A</string>
+    <string name="Adress1.1">dd</string>
+    <string name="Adress1.2">ress</string>
+    <string name="SelectOrder">Select your order</string>
+    <string name="Street">Street</string>
+    <string name="Cologne">Cologne</string>
+    <string name="City">City</string>
+    <string name="ZipCode">Zip code</string>
+    <string name="SendInfo">Tell us where you want us to send your food.</string>
+
+    <string name="LogOut">Log out</string>
 
 
 
-
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">Fund Account</string>
+    <string name="menu_slideshow">Products</string>
 </resources>

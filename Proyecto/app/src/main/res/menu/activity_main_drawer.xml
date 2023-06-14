@@ -7,16 +7,16 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/inicio_icon"
-            android:title="Inicio"/>
+            android:title="Home"/>
 
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/cuenta_icon"
-            android:title="Cuenta" />
+            android:title="Fund" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/platillo_icon"
-            android:title="Platillos" />
+            android:title="Products" />
 
         <item
             android:id="@+id/historialFragment"
@@ -25,7 +25,7 @@
 
         <item
             android:id="@+id/envioFragment"
-            android:title="Envio"
+            android:title="Send"
             android:icon="@drawable/envio_icon"/>
     </group>
 </menu>
