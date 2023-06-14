@@ -31,8 +31,16 @@
     <string name="SingUpPassword">Password</string>
     <string name="SingUpConfirmPassword">Confirm password</string>
 
+    <string name="Total">Total: </string>
+    <string name="Pay">¡Pay! </string>
 
-
+    <string name="Fund">Fund </string>
+    <string name="FundButton">¡Fund! </string>
+    <string name="Fund1.1">A</string>
+    <string name="Fund1.2">ccount</string>
+    <string name="FundText1">You must add money to your account, otherwise you will not be allowed to buy</string>
+    <string name="Amount">Amount to enter</string>
+    <string name="Available">Available balance: </string>
 
 
     <string name="textHomeNameO">O</string>
