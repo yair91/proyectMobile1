@@ -25,12 +25,12 @@
     <fragment
         android:id="@+id/envioFragment"
         android:name="com.example.proyecto.ui.envio.EnvioFragment"
-        android:label="fragment_envio"
+        android:label="Send"
         tools:layout="@layout/fragment_envio" />
     <fragment
         android:id="@+id/historialFragment"
         android:name="com.example.proyecto.ui.historial.HistorialFragment"
-        android:label="fragment_historial"
+        android:label="Historial"
         tools:layout="@layout/fragment_historial" />
     <fragment
         android:id="@+id/salidaFragment"

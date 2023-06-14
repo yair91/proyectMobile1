@@ -31,8 +31,16 @@
     <string name="SingUpPassword">Password</string>
     <string name="SingUpConfirmPassword">Confirm password</string>
 
+    <string name="Total">Total: </string>
+    <string name="Pay">¡Pay! </string>
 
-
+    <string name="Fund">Fund </string>
+    <string name="FundButton">¡Fund! </string>
+    <string name="Fund1.1">A</string>
+    <string name="Fund1.2">ccount</string>
+    <string name="FundText1">You must add money to your account, otherwise you will not be allowed to buy</string>
+    <string name="Amount">Amount to enter</string>
+    <string name="Available">Available balance: </string>
 
 
     <string name="textHomeNameO">O</string>
@@ -44,10 +52,21 @@
     <string name="textHome3">it gona be avialble </string>
     <string name="textHome3.1">around the world, and now you’re maken a change</string>
 
+    <string name="Send">Send</string>
+    <string name="Adress1">A</string>
+    <string name="Adress1.1">dd</string>
+    <string name="Adress1.2">ress</string>
+    <string name="SelectOrder">Select your order</string>
+    <string name="Street">Street</string>
+    <string name="Cologne">Cologne</string>
+    <string name="City">City</string>
+    <string name="ZipCode">Zip code</string>
+    <string name="SendInfo">Tell us where you want us to send your food.</string>
+
+    <string name="LogOut">Log out</string>
 
 
 
-
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">Fund Account</string>
+    <string name="menu_slideshow">Products</string>
 </resources>
