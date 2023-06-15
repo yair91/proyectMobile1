@@ -75,7 +75,6 @@
             android:id="@+id/btnGuardarDomicilio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="enviar"
-            android:text="Enviar" />
+            android:text="enviar" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

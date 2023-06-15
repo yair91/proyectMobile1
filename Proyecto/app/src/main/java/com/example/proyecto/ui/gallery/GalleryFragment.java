@@ -1,9 +1,11 @@
 package com.example.proyecto.ui.gallery;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,10 +21,9 @@ import com.example.proyecto.databinding.FragmentGalleryBinding;
 public class GalleryFragment extends Fragment {
 
     private FragmentGalleryBinding binding;
-    private EditText pre;
-    private TextView po;
+    private EditText mon;
+    private TextView res;
     private CostruCuenta[] costrucuenta;
-
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -35,33 +36,45 @@ public class GalleryFragment extends Fragment {
         costrucuenta = new CostruCuenta[1];
         costrucuenta[0] = new CostruCuenta();
 
-        pre = root.findViewById(R.id.txtprecio);
-        po = root.findViewById(R.id.txtdinero);
+        mon = root.findViewById(R.id.txtprecio);
+        res = root.findViewById(R.id.txtdinero);
+        Button buttonMostrarValor = root.findViewById(R.id.subir);
 
+        buttonMostrarValor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (camposLlenos()) {
+                    obtenervalor();
+                } else {
+                    Toast.makeText(requireContext(), "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         return root;
-    }
-    public void obtenervalor(View view){
-        if (pre.getText().length() == 0) {
-            Toast.makeText(getActivity(), "Falta cantidad a agregar", Toast.LENGTH_SHORT).show();
-        } else {
-            int pr = Integer.parseInt(pre.getText().toString());
-            costrucuenta[0].setAumento(pr);
-            actualizar(view);
-            pre.setText("");
-        }
-    }
-
-    public void actualizar(View view){
-        int v1 = costrucuenta[0].getAumento();
-        int v2 = costrucuenta[0].getAumneto2();
-        int valor = v1 + v2;
-        costrucuenta[0].setAumneto2(valor);
-        po.setText(String.valueOf(valor));
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    private boolean camposLlenos() {
+        return !TextUtils.isEmpty(mon.getText());
+    }
+
+    public void obtenervalor(){
+        int pre = Integer.parseInt(mon.getText().toString());
+        costrucuenta[0].setAumento(pre);
+        actualizar();
+        mon.setText("");
+    }
+
+    public void actualizar(){
+        int v1 = costrucuenta[0].getAumento();
+        int v2 = costrucuenta[0].getAumneto2();
+        int valor = v1 + v2;
+        costrucuenta[0].setAumneto2(valor);
+        res.setText(String.valueOf(valor));
     }
 }
