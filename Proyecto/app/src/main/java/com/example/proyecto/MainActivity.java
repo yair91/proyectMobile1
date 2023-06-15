@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, MenuLateral.class);
                 startActivity(intent);
                 bandera++;
-                Toast.makeText(this, "Bienvenido "+user[i].getNombre(), Toast.LENGTH_SHORT).show();
             }
         }
         if (bandera == 0) {

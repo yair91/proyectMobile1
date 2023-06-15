@@ -24,7 +24,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <Button
-        android:id="@+id/btnSendSlideshow"
+        android:id="@+id/button2"
         style="@style/MiEstiloDeBoton"
         android:layout_width="379dp"
         android:layout_height="53dp"
@@ -130,7 +130,7 @@
         android:textColor="@color/blueMain"
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/btnSendSlideshow" />
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
         android:id="@+id/textView23"
@@ -142,7 +142,7 @@
         android:textColor="@color/blueMain"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/btnSendSlideshow" />
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
         android:id="@+id/textView9"
@@ -155,7 +155,7 @@
         android:textColor="@color/blueMain"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSendSlideshow" />
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
         android:id="@+id/textView22"
@@ -167,7 +167,7 @@
         android:textColor="@color/orangeMain"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/btnSendSlideshow" />
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
         android:id="@+id/textView27"
