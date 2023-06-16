@@ -1,8 +1,8 @@
 package com.example.proyecto;
 
 public class Carrito {
-    private static int id, img, id_platillo, cantidad_comida;
-    private static Double Precio_normal, Precio_IVA;
+    private int id, img, id_platillo, cantidad_comida;
+    private Double Precio_normal, Precio_IVA;
 
     public Carrito(int id, int id_platillo, int cantidad_comida, Double precio_normal, Double precio_IVA) {
         this.id = id;

@@ -38,7 +38,6 @@ public class ListAdapter extends ArrayAdapter<PlatillosClass> {
             holder.imagen = convertView.findViewById(R.id.imgImagenPlatillo);
             holder.nombre = convertView.findViewById(R.id.txtNombrePlatillo);
             holder.costo = convertView.findViewById(R.id.txtCostoPlatillo);
-            /*holder.Descripcion = convertView.findViewById(R.id.txtDescripcionPlatillo);*/
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -57,6 +56,5 @@ public class ListAdapter extends ArrayAdapter<PlatillosClass> {
         ImageView imagen;
         TextView nombre;
         TextView costo;
-        TextView Descripcion;
     }
 }

@@ -20,6 +20,16 @@ public class MenuLateral extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMenuLateralBinding binding;
 
+    private Carrito[] carrito;
+
+    public Carrito[] getCarrito() {
+        return carrito;
+    }
+
+    public void setCarrito(Carrito[] carrito) {
+        this.carrito = carrito;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

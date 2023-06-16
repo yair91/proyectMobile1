@@ -8,13 +8,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.proyecto.Carrito;
-import com.example.proyecto.ListAdapter;
-import com.example.proyecto.ListAdapterHistory;
-import com.example.proyecto.PlatillosClass;
-import com.example.proyecto.R;
+import com.example.proyecto.CostruCuenta;
+import com.example.proyecto.MenuLateral;
 import com.example.proyecto.databinding.FragmentHistorialBinding;
 
 import java.util.ArrayList;
@@ -23,52 +24,67 @@ import java.util.List;
 public class HistorialFragment extends Fragment {
 
     private @NonNull FragmentHistorialBinding mViewModel;
-
+    private TextView txtCantidadEnchiladas, txtCantidadFlautas, txtCantidadPozole,
+            txtCantidadTacos, txtCantidadTortas, txtPrecioTotal;
+    private Button btnPagar;
     private Carrito[] carrito;
-
-    private ListView listView;
-
-    private ListAdapterHistory listAdapterHistory;
-
-    private List<Carrito> mCarritosList = new ArrayList<>();
-
-    public static HistorialFragment newInstance(Carrito[] carrito) {
-        HistorialFragment fragment = new HistorialFragment();
-        fragment.carrito = carrito;
-        return fragment;
-    }
+    private CostruCuenta costruCuenta;
+    private Double cantidad_total = 0.0;
+    private int cantidad_comida_pozole = 0, cantidad_comida_tacos = 0, cantidad_comida_tortas = 0,
+                cantidad_comida_flautas = 0, cantidad_comida_enchiladas = 0;
+    private Double precio_comida_pozole = 0.0, precio_comida_tacos = 0.0, precio_comida_tortas = 0.0,
+            precio_comida_flautas = 0.0, precio_comida_enchiladas = 0.0;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mViewModel = FragmentHistorialBinding.inflate(inflater, container, false);
         View root = mViewModel.getRoot();
+        txtCantidadEnchiladas = mViewModel.txtCantidadEnchiladas;
+        txtCantidadFlautas = mViewModel.txtCantidadFlautas;
+        txtCantidadPozole = mViewModel.txtCantidadPozole;
+        txtCantidadTacos = mViewModel.txtCantidadTacos;
+        txtCantidadTortas = mViewModel.txtCantidadTortas;
+        txtPrecioTotal = mViewModel.txtPrecioTotal;
+        btnPagar = mViewModel.btnPay;
+
+        carrito = ((MenuLateral) requireActivity()).getCarrito();
         try {
             for (int i = 0; i < 7; i++) {
                 if (carrito[i] != null) {
-                    int id = carrito[i].getId();
-
-                    if (id == 0) {
-                        mCarritosList.add(new Carrito(R.mipmap.pozole, 1, 2000.00));
-                    } else if (id == 1) {
-                        mCarritosList.add(new Carrito(R.mipmap.pozole, 2, 2000.00));
-                    } else if (id == 2) {
-                        mCarritosList.add(new Carrito(R.mipmap.pozole, 3, 2000.00));
-                    } else if (id == 3) {
-                        mCarritosList.add(new Carrito(R.mipmap.pozole, 4, 2000.00));
-                    } else if (id == 4) {
-                        mCarritosList.add(new Carrito(R.mipmap.pozole, 5, 2000.00));
-                    } else if (id == 5) {
-                        mCarritosList.add(new Carrito(R.mipmap.pozole, 6, 2000.00));
+                    if(carrito[i].getId_platillo() == 0){
+                        cantidad_comida_pozole++;
+                        precio_comida_pozole = carrito[i].getPrecio_IVA();
+                    } else if(carrito[i].getId_platillo() == 1){
+                        cantidad_comida_tacos++;
+                        precio_comida_tacos = carrito[i].getPrecio_IVA();
+                    } else if(carrito[i].getId_platillo() == 2){
+                        cantidad_comida_tortas++;
+                        precio_comida_tortas = carrito[i].getPrecio_IVA();
+                    } else if(carrito[i].getId_platillo() == 3){
+                        cantidad_comida_flautas++;
+                        precio_comida_flautas = carrito[i].getPrecio_IVA();
+                    } else if(carrito[i].getId_platillo() == 4){
+                        cantidad_comida_enchiladas++;
+                        precio_comida_enchiladas = carrito[i].getPrecio_IVA();
                     }
+
+                    txtCantidadEnchiladas.setText(String.valueOf(cantidad_comida_enchiladas));
+                    txtCantidadFlautas.setText(String.valueOf(cantidad_comida_flautas));
+                    txtCantidadPozole.setText(String.valueOf(cantidad_comida_pozole));
+                    txtCantidadTacos.setText(String.valueOf(cantidad_comida_tacos));
+                    txtCantidadTortas.setText(String.valueOf(cantidad_comida_tortas));
+
+                    cantidad_total =
+                            (cantidad_comida_pozole * precio_comida_pozole) +
+                            (cantidad_comida_tacos * precio_comida_tacos) +
+                            (cantidad_comida_tortas * precio_comida_tortas) +
+                            (cantidad_comida_flautas * precio_comida_flautas) +
+                            (cantidad_comida_enchiladas * precio_comida_enchiladas);
+
+                    txtPrecioTotal.setText(String.format("%.2f", cantidad_total));
                 }
             }
-
-            // Inicializador de adaptador
-            listAdapterHistory = new ListAdapterHistory(requireContext(), R.layout.item_row, mCarritosList);
-
-            listView.setAdapter(listAdapterHistory);
-
-        } catch (Exception e){
-            System.out.println("Error: "+e);
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
         }
         return root;
     }
