@@ -7,7 +7,7 @@ import android.os.Bundle;
 import com.example.proyecto.ui.historial.HistorialFragment;
 
 public class HistorialActivity extends AppCompatActivity {
-
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,4 +18,6 @@ public class HistorialActivity extends AppCompatActivity {
                     .commitNow();
         }
     }
+
+ */
 }

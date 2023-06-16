@@ -10,72 +10,355 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="0dp"
+        android:layout_width="207dp"
         android:layout_height="53dp"
         android:layout_marginStart="102dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="102dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/small"
         tools:src="@drawable/small" />
 
-    <ListView
-        android:id="@+id/listPlatillosSeleccionados"
-        style="@style/MiEstiloDeBoton"
-        android:layout_width="0dp"
-        android:layout_height="309dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/button5"
+        style="@style/BlueButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="667dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/Pay"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-
+    <TextView
+        android:id="@+id/txtPrecioTotal"
+        android:layout_width="82dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="614dp"
+        android:layout_marginEnd="132dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/blueMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="614dp"
         android:layout_weight="1"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/Total"
         android:textColor="@color/orangeMain"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listPlatillosSeleccionados" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtPrecioTotal"
-        android:layout_width="82dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="28dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/blueMain"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/listPlatillosSeleccionados" />
-
-    <Button
-        android:id="@+id/button5"
-        style="@style/BlueButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/Pay"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+    <LinearLayout
+        android:layout_width="375dp"
+        android:layout_height="530dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="76dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:background="@drawable/layout_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/pozole" />
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textAlignment="center"
+                    android:text="Pozole" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textAlignment="center"
+                    android:textColor="@color/orangeMain"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCantidadPozole"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:background="@drawable/layout_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/tacos" />
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textAlignment="center"
+                    android:text="Tacos" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+                    android:textColor="@color/orangeMain"
+                    android:text="TextView"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCantidadTacos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:background="@drawable/layout_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/tortas" />
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textAlignment="center"
+                    android:text="Tortas" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+                    android:textColor="@color/orangeMain"
+                    android:text="TextView"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCantidadTortas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:background="@drawable/layout_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/flautas" />
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textAlignment="center"
+                    android:text="Flautas" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+                    android:textColor="@color/orangeMain"
+                    android:text="TextView"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCantidadFlautas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:background="@drawable/layout_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/enchiladas" />
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textAlignment="center"
+                    android:text="Enchiladas" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+                    android:textColor="@color/orangeMain"
+                    android:text="TextView"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCantidadEnchiladas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

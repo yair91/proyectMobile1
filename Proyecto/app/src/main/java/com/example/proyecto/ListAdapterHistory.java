@@ -38,7 +38,6 @@ public class ListAdapterHistory extends ArrayAdapter<Carrito> {
             holder.imagen = convertView.findViewById(R.id.imgImagenPlatillo);
             holder.nombre = convertView.findViewById(R.id.txtNombrePlatillo);
             holder.costo = convertView.findViewById(R.id.txtCostoPlatillo);
-            //holder.Descripcion = convertView.findViewById(R.id.txtDescripcionPlatillo); //descomentar despues
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -59,6 +58,5 @@ public class ListAdapterHistory extends ArrayAdapter<Carrito> {
         ImageView imagen;
         TextView nombre;
         TextView costo;
-        TextView Descripcion;
     }
 }
