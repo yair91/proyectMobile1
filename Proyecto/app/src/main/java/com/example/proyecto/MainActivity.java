@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText email, contrasena;
-    Usuario user[] = new Usuario[15];
+    Usuario user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +20,9 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.etEmaiLogin);
         contrasena = findViewById(R.id.etContrasenaLogin);
         if (getIntent().hasExtra("usuarios")) {
-            user = (Usuario[]) getIntent().getSerializableExtra("usuarios");
+            user = (Usuario) getIntent().getSerializableExtra("usuarios");
         } else {
-            for (int i = 0; i < 15; i++) {
-                user[i] = new Usuario();
-            }
+           user = new Usuario();
         }
     }
 
@@ -32,17 +30,24 @@ public class MainActivity extends AppCompatActivity {
         int bandera = 0;
         String correo = email.getText().toString();
         String password = contrasena.getText().toString();
-        for (int i = 0; i < 15; i++) {
-            if (correo.equals(user[i].getEmail()) && password.equals(user[i].getContrasena())) {
-                Intent intent = new Intent(this, MenuLateral.class);
-                startActivity(intent);
-                bandera++;
+        if(correo.equals("") && password.equals("")){
+           Toast mensaje = Toast.makeText(this, "Datos no ingresados", Toast.LENGTH_LONG);
+            mensaje.show();
+        }else{
+
+                if (correo.equals(user.getEmail()) && password.equals(user.getContrasena())) {
+                    Intent intent = new Intent(this, MenuLateral.class);
+                    startActivity(intent);
+                    bandera++;
+                    Toast.makeText(this, "Bienvenido "+user.getNombre(), Toast.LENGTH_SHORT).show();
+                }
+
+            if (bandera == 0) {
+                Toast mensaje = Toast.makeText(this, "Usuario no registrado", Toast.LENGTH_LONG);
+                mensaje.show();
             }
         }
-        if (bandera == 0) {
-            Toast mensaje = Toast.makeText(this, "Usuario no registrado", Toast.LENGTH_LONG);
-            mensaje.show();
-        }
+
     }
 
     public void registrarse(View view) {
