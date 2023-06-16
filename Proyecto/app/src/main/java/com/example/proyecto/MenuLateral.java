@@ -1,8 +1,10 @@
 package com.example.proyecto;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.Menu;
+import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -64,5 +66,15 @@ public class MenuLateral extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu_lateral);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if(id == R.id.Exit){
+            Intent exit = new Intent(this, SalidaActivity.class);
+            startActivity(exit);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
