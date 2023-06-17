@@ -27,5 +27,11 @@
             android:id="@+id/envioFragment"
             android:title="Send"
             android:icon="@drawable/envio_icon"/>
+
+        <item
+            android:id="@+id/fileFragment"
+            android:title="Historias Envios"
+            android:icon="@drawable/historial_icon"/>
+
     </group>
 </menu>
