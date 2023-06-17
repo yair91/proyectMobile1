@@ -36,4 +36,6 @@ public class SalidaFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_salida, container, false);
     }
 
+
+
 }

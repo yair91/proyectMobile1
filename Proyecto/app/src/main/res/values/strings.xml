@@ -64,6 +64,8 @@
     <string name="SendInfo">Tell us where you want us to send your food.</string>
 
     <string name="LogOut">Log out</string>
+    <string name="LogOutInfo">Thank you for using ¡Order. Until next time!</string>
+
 
 
     <string name="menu_gallery">Fund Account</string>
