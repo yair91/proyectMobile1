@@ -2,6 +2,7 @@ package com.example.proyecto.ui.envio;
 
 import androidx.lifecycle.ViewModelProvider;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -26,7 +27,7 @@ public class EnvioFragment extends Fragment {
 
     private EditText ca, co, ciu, cod;
     private Spinner dom;
-    private String[] opcionesSpinner = {"Dirreccion 1", "Dirreccion 2", "Dirreccion 3", "Dirreccion 4", "Dirreccion 5", "Dirreccion 6", "Dirreccion 7"};
+    private String[] opcionesSpinner = {"SELECCIONA UNA", "CETI COLOMOS", "CETI TONALA", "CETI RIO SANTIAGO"};
     private CostruEnvio[] costruenvios;
     private int conta = 1;
 
@@ -43,6 +44,7 @@ public class EnvioFragment extends Fragment {
         // TODO: Use the ViewModel
     }
 
+    @SuppressLint("MissingInflatedId")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -63,15 +65,13 @@ public class EnvioFragment extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dom.setAdapter(adapter);
 
-        Button btnEnviar = rootView.findViewById(R.id.btnGuardarDomicilio);
-        btnEnviar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (camposLlenos()) {
-                    enviar();
-                } else {
-                    Toast.makeText(requireContext(), "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
-                }
+        Button btnEnviar = rootView.findViewById(R.id.btnGuardarDomicilio2);
+
+        btnEnviar.setOnClickListener(v -> {
+            if (camposLlenos()) {
+                enviar();
+            } else {
+                Toast.makeText(requireContext(), "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -2,26 +2,19 @@ package com.example.proyecto;
 
 public class CostruCuenta {
 
-    private int aumento;
-    private int aumneto2 = 0;
+    private static int aumento;
 
     public CostruCuenta() {
-        this.aumneto2 = 0;
     }
-
-    public int getAumento(){
-        return aumento;
-    }
-
-    public void setAumento(int aumento){
+    public CostruCuenta(int aumento) {
         this.aumento = aumento;
     }
 
-    public int getAumneto2() {
-        return aumneto2;
+    public int getAumento() {
+        return aumento;
     }
 
-    public void setAumneto2(int aumneto2) {
-        this.aumneto2 = aumneto2;
+    public void setAumento(int aumento) {
+        this.aumento = aumento;
     }
 }

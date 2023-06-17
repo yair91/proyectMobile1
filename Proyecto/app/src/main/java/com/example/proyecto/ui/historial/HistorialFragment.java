@@ -38,6 +38,9 @@ public class HistorialFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mViewModel = FragmentHistorialBinding.inflate(inflater, container, false);
         View root = mViewModel.getRoot();
+        
+        costruCuenta = new CostruCuenta();
+        
         txtCantidadEnchiladas = mViewModel.txtCantidadEnchiladas;
         txtCantidadFlautas = mViewModel.txtCantidadFlautas;
         txtCantidadPozole = mViewModel.txtCantidadPozole;
@@ -47,6 +50,7 @@ public class HistorialFragment extends Fragment {
         btnPagar = mViewModel.btnPay;
 
         carrito = ((MenuLateral) requireActivity()).getCarrito();
+        // Funciones para mostrar los elementos
         try {
             for (int i = 0; i < 7; i++) {
                 if (carrito[i] != null) {
@@ -86,6 +90,25 @@ public class HistorialFragment extends Fragment {
         } catch (Exception e) {
             System.out.println("Error: " + e);
         }
+
+        // Metodo Onclick
+        btnPagar.setOnClickListener(v -> PagarCuenta(cantidad_total));
+
         return root;
     }
+
+    private void PagarCuenta(Double PrecioTotal) {
+        if(costruCuenta != null){
+            if(PrecioTotal > costruCuenta.getAumento()){
+                Toast.makeText(getActivity(), "No tienes suficente dinero", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getActivity(), "Gracias por tu compra!", Toast.LENGTH_SHORT).show();
+                int precTotal = PrecioTotal.intValue();
+                costruCuenta.setAumento(costruCuenta.getAumento() - precTotal);
+            }
+        } else {
+            Toast.makeText(getActivity(), "Por favor fondea tu cuenta", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }
