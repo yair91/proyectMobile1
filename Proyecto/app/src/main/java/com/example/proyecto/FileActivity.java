@@ -4,20 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.proyecto.ui.historial.HistorialFragment;
+import com.example.proyecto.ui.file.FileFragment;
 
-public class HistorialActivity extends AppCompatActivity {
-/*
+public class FileActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_historial);
+        setContentView(R.layout.activity_file);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, HistorialFragment.newInstance())
+                    .replace(R.id.container, FileFragment.newInstance())
                     .commitNow();
         }
     }
-
- */
 }

@@ -1,4 +1,4 @@
-package com.example.proyecto.ui.main;
+package com.example.proyecto.ui.file;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,18 +14,18 @@ import android.view.ViewGroup;
 
 import com.example.proyecto.R;
 
-public class SalidaFragment extends Fragment {
+public class FileFragment extends Fragment {
 
-    private SalidaViewModel mViewModel;
+    private FileViewModel mViewModel;
 
-    public static SalidaFragment newInstance() {
-        return new SalidaFragment();
+    public static FileFragment newInstance() {
+        return new FileFragment();
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(SalidaViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(FileViewModel.class);
         // TODO: Use the ViewModel
     }
 
@@ -33,9 +33,7 @@ public class SalidaFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_salida, container, false);
+        return inflater.inflate(R.layout.fragment_file, container, false);
     }
-
-
 
 }

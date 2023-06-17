@@ -1,7 +1,7 @@
 package com.example.proyecto;
 
 public class Carrito {
-    private int id, id_platillo, cantidad_comida;
+    private int id, img, id_platillo, cantidad_comida;
     private Double Precio_normal, Precio_IVA;
 
     public Carrito(int id, int id_platillo, int cantidad_comida, Double precio_normal, Double precio_IVA) {
@@ -9,6 +9,12 @@ public class Carrito {
         this.id_platillo = id_platillo;
         this.cantidad_comida = cantidad_comida;
         Precio_normal = precio_normal;
+        Precio_IVA = precio_IVA;
+    }
+
+    public Carrito(int img, int id_platillo, Double precio_IVA) {
+        this.img = img;
+        this.id_platillo = id_platillo;
         Precio_IVA = precio_IVA;
     }
 

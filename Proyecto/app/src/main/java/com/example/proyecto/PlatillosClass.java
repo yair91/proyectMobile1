@@ -22,11 +22,10 @@ public class PlatillosClass {
         this.Disponible = disponible;
     }
 
-    public PlatillosClass(int imagen, String nombre, Double costo, String Descripcion) {
+    public PlatillosClass(int imagen, String nombre, Double costo) {
         this.imagen = imagen;
         this.Nombre = nombre;
         this.costo = costo;
-        this.Descripcion = Descripcion;
     }
 
     public int getId() {

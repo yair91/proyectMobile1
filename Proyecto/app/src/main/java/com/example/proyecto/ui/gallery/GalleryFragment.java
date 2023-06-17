@@ -1,31 +1,54 @@
 package com.example.proyecto.ui.gallery;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.proyecto.CostruCuenta;
+import com.example.proyecto.R;
 import com.example.proyecto.databinding.FragmentGalleryBinding;
 
 public class GalleryFragment extends Fragment {
 
     private FragmentGalleryBinding binding;
+    private EditText mon;
+    private TextView res;
+    private CostruCuenta costrucuenta;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textView10;// binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        costrucuenta = new CostruCuenta();
+
+        mon = root.findViewById(R.id.editTextNumberDecimal);
+        res = root.findViewById(R.id.txtdinero);
+        Button buttonMostrarValor = root.findViewById(R.id.subir);
+
+        if(costrucuenta != null){
+            res.setText(String.valueOf(costrucuenta.getAumento()));
+        } else {
+            res.setText(String.valueOf(0));
+        }
+
+        buttonMostrarValor.setOnClickListener(v -> {
+            if (camposLlenos()) {
+                obtenervalor();
+            } else {
+                Toast.makeText(requireContext(), "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
+            }
+        });
         return root;
     }
 
@@ -33,5 +56,16 @@ public class GalleryFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    private boolean camposLlenos() {
+        return !TextUtils.isEmpty(mon.getText());
+    }
+
+    public void obtenervalor(){
+        int pre = Integer.parseInt(mon.getText().toString());
+        costrucuenta = new CostruCuenta(pre);
+        mon.setText("");
+        res.setText(String.valueOf(pre));
     }
 }
