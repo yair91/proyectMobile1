@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.content.Intent;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -23,6 +25,7 @@ public class HomeFragment extends Fragment {
 
 
     private FragmentHomeBinding binding;
+    private Button OrdenaYa;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -30,8 +33,13 @@ public class HomeFragment extends Fragment {
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
 
+        OrdenaYa = binding.btnOrdenaYa;
+
+        View root = binding.getRoot();
+        OrdenaYa.setOnClickListener(v -> {
+            Toast.makeText(getActivity(), "COMIDA TIPICA MEXICANA, ORDENA YA!", Toast.LENGTH_SHORT).show();
+        });
         return root;
     }
 
@@ -40,11 +48,4 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
-    //Esto me dejo cerr<r la sesion y sigui guardando el usuario
-    /*public void order( View view){
-        Intent intent = new Intent(view.getContext(), PlatillosClass.class);
-        startActivity(intent);
-    }*/
-
 }

@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class Usuario implements Serializable {
 
-    private String nombre;
-    private String apellido;
-    private String email;
-    private String contrasena;
+    private static String nombre;
+    private static String apellido;
+    private static String email;
+    private static String contrasena;
 
     public Usuario() {
         nombre = "";

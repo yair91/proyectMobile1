@@ -64,8 +64,12 @@ public class GalleryFragment extends Fragment {
 
     public void obtenervalor(){
         int pre = Integer.parseInt(mon.getText().toString());
-        costrucuenta = new CostruCuenta(pre);
+        int antigua_cuenta = 0;
         mon.setText("");
+        if(costrucuenta != null){
+            pre = pre + costrucuenta.getAumento();
+        }
+        costrucuenta.setAumento(pre);
         res.setText(String.valueOf(pre));
     }
 }

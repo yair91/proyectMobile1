@@ -2,11 +2,14 @@ package com.example.proyecto;
 
 public class CostruEnvio {
 
-    private String pedido;
-    private String calle;
-    private String colonia;
-    private String ciudad;
-    private int codigopos;
+    private static String pedido;
+    private static String calle;
+    private static String colonia;
+    private static String ciudad;
+    private static int codigopos;
+
+    public CostruEnvio() {
+    }
 
     public CostruEnvio(String pedido, String calle, String colonia, String ciudad, int codigopos) {
         this.pedido = pedido;

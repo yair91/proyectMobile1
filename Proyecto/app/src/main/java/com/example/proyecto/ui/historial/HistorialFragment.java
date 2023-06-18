@@ -105,6 +105,13 @@ public class HistorialFragment extends Fragment {
                 Toast.makeText(getActivity(), "Gracias por tu compra!", Toast.LENGTH_SHORT).show();
                 int precTotal = PrecioTotal.intValue();
                 costruCuenta.setAumento(costruCuenta.getAumento() - precTotal);
+                txtCantidadEnchiladas.setText("0"); // Mostramos el indicador como 0
+                txtCantidadFlautas.setText("0");    // Mostramos el indicador como 0
+                txtCantidadPozole.setText("0");     // Mostramos el indicador como 0
+                txtCantidadTacos.setText("0");      // Mostramos el indicador como 0
+                txtCantidadTortas.setText("0");     // Mostramos el indicador como 0
+                txtPrecioTotal.setText("0");        // Mostramos el indicador como 0
+                carrito = null;     // Borramos el arreglo.
             }
         } else {
             Toast.makeText(getActivity(), "Por favor fondea tu cuenta", Toast.LENGTH_SHORT).show();
